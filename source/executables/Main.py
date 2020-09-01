@@ -33,14 +33,14 @@ def calculate_cards_value(dealt_cards : list, card_number: int):  # Calculates t
     if card_number > 0:  # the value of a specific card and not negative
         card = dealt_cards[card_number]
         if card == 'J' or card == 'Q' or card == 'K':
-            value += 11
+            value += 10
         else:
             value += int(card)
         return value
 
     for card in dealt_cards[1:]:
         if card == 'J' or card == 'Q' or card == 'K':
-            value += 11
+            value += 10
         else:
             value += int(card)
     return value
