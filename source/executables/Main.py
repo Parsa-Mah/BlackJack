@@ -22,11 +22,11 @@ def deal_cards(temp_id: int):  # Deals Cards for a player
             dealt_cards.append('K')
         else:  # Just for check
             print("Error in dealers_hand function, out of bounds")
-    print(dealt_cards)  # todo remove debug line
+
     return dealt_cards
 
 
-def calculate_cards_value(dealt_cards : list, card_number: int):  # Calculates the value of the cards
+def calculate_cards_value(dealt_cards: list, card_number: int = 0):  # Calculates the value of the cards
 
     value = 0
 
@@ -81,7 +81,7 @@ def add_card(hand: list):  # list is a call by object reference and doesnt need 
 
 
 dealer_cards = deal_cards(0)
-dealer_cards_value = calculate_cards_value(dealer_cards, 1)
+dealer_cards_value = calculate_cards_value(dealer_cards, 2)
 dealer_cards_value_full = calculate_cards_value(dealer_cards, 0)  # todo remove this line it's a test
 
 player_cards = deal_cards(1)
