@@ -6,7 +6,7 @@ class Player:
 
         self.player_num = player_num
         self.hand = self.deal_cards()
-        self.value = 0
+        self.value: int = 0
 
     def deal_cards(self):  # Deals Player for a Player
 
