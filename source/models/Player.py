@@ -1,15 +1,16 @@
 import random
 
 
-class Cards:
-    def __init__(self, temp_id):
+class Player:
+    def __init__(self, player_num: int):
 
-        self.temp_id = temp_id
-        self.hand = self.deal_cards(self.temp_id)
+        self.player_num = player_num
+        self.hand = self.deal_cards()
+        self.value = 0
 
-    def deal_cards(self, temp_id: int):  # Deals Cards for a player
+    def deal_cards(self):  # Deals Player for a Player
 
-        dealt_cards = [temp_id]
+        dealt_cards = []
 
         for i in range(2):
 
@@ -30,16 +31,15 @@ class Cards:
 
     def add_card(self):  # list is a call by object reference and doesnt need to return anything
 
-        hand = self.hand
         a = random.randint(1, 13)
 
         if a < 11:
-            hand.append(str(a))
+            self.hand.append(str(a))
         elif a == 11:
-            hand.append('J')
+            self.hand.append('J')
         elif a == 12:
-            hand.append('Q')
+            self.hand.append('Q')
         elif a == 13:
-            hand.append('K')
+            self.hand.append('K')
         else:  # Just for check
             print("Error in add_card function, out of bounds")
