@@ -1,5 +1,6 @@
-import source.models.PlayerModel as Player
+import source.models.PlayerModel as PlayerModel
 import source.computation.Calculations as Calc
+import source.models.CardsModel as CardsModel
 
 print()
 print("Welcome to my Blackjack game")
@@ -7,13 +8,13 @@ print("Now dealer will deal cards...\n")
 
 players_list = []
 
-dealer = Player.Player(0)
+dealer = PlayerModel.Player(0)
 Calc.calculate_cards_value(dealer)
 players_list.append(dealer)
-player_1 = Player.Player(1)
+player_1 = PlayerModel.Player(1)
 Calc.calculate_cards_value(player_1)
 players_list.append(player_1)
-player_2 = Player.Player(2)
+player_2 = PlayerModel.Player(2)
 Calc.calculate_cards_value(player_2)
 players_list.append(player_2)
 
@@ -42,3 +43,9 @@ winners = Calc.winner_players_list(dealer, player_1, player_2)
 
 for each in winners:
     print("{}".format(each.player_num))
+cards = CardsModel.Cards(2)
+print(cards.cards)
+cards.shuffle_cards()
+print(cards.cards)
+cards.shuffle_cards()
+print(cards.cards)

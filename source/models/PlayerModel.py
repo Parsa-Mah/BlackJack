@@ -1,3 +1,7 @@
+
+# This model represents the player that are going to play BlackJack
+# This model has all the attributes related to a real player
+# things like its name, its cards and cards value
 import random
 
 
