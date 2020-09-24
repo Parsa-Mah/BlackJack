@@ -12,8 +12,6 @@ players_list = []
 cards = CardsModel.Cards(1)
 cards.shuffle_cards()
 
-print(cards.cards)
-
 dealer = PlayerModel.Player(0)
 players_list.append(dealer)
 player_1 = PlayerModel.Player(1)
@@ -22,7 +20,7 @@ player_2 = PlayerModel.Player(2)
 players_list.append(player_2)
 
 TableManager.deal_cards(cards, players_list)
-TableManager.deal_cards(cards, players_list)
+
 
 Calc.calculate_cards_value(dealer)
 Calc.calculate_cards_value(player_1)
@@ -44,11 +42,6 @@ for player in players_list:
                                                                           player.hand[1],
                                                                           player.value))
 
-print("dealers cards are:  {:2} {:2} of the value: {}".format(
-                                                              dealer.hand[0],
-                                                              dealer.hand[1],
-                                                              dealer.value
-                                                              ))  # todo remove this line
 winners = Calc.winner_players_list(dealer, player_1, player_2)
 
 for each in winners:
