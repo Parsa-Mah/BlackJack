@@ -1,4 +1,4 @@
-#BlackJack
+# BlackJack
 This is an AI that supposed to play Black Jack casino game
 
 This program uses a real model of cards nx52 so it can determine the victory and failure chance
